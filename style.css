@@ -1,7 +1,7 @@
 /* ── RESET & BASE ─────────────────────────────────── */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f4ff;color:#1e293b;line-height:1.6}
 a{text-decoration:none;color:inherit}
 
 /* ── VARIABLES ────────────────────────────────────── */
@@ -10,7 +10,7 @@ a{text-decoration:none;color:inherit}
   --accent2:#1d4ed8;
   --accent-light:#eff6ff;
   --accent-mid:#bfdbfe;
-  --bg:#f8fafc;
+  --bg:#f0f4ff;
   --bg2:#ffffff;
   --bg3:#f1f5f9;
   --border:#e2e8f0;
@@ -54,7 +54,7 @@ a{text-decoration:none;color:inherit}
   display:flex;align-items:center;justify-content:center;
   text-align:center;padding:100px 24px 60px;
   position:relative;overflow:hidden;
-  background:linear-gradient(135deg,#eff6ff 0%,#f8fafc 50%,#f0fdf4 100%);
+  background:linear-gradient(135deg,#dbeafe 0%,#eef2ff 50%,#e0f2fe 100%);
 }
 #hero::before{
   content:'';position:absolute;top:-100px;right:-100px;
@@ -100,7 +100,7 @@ a{text-decoration:none;color:inherit}
 
 /* ── SECTIONS ─────────────────────────────────────── */
 section{padding:72px 0;border-bottom:1px solid var(--border)}
-section:nth-child(even){background:#fff}
+section:nth-child(even){background:#f8faff}
 .container{max-width:920px;margin:0 auto;padding:0 24px}
 .section-tag{font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:3px;margin-bottom:8px}
 .section-title{font-size:28px;font-weight:700;color:var(--text);margin-bottom:36px;letter-spacing:-0.5px}
@@ -146,7 +146,7 @@ section:nth-child(even){background:#fff}
 .link-btn:hover{background:var(--accent-mid)}
 
 /* ── IMAGE SLIDER ─────────────────────────────────── */
-.img-slider{position:relative;width:100%;height:150px;border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--bg3);border:1px solid var(--border)}
+.img-slider{position:relative;width:100%;height:160px;border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--bg3);border:1px solid var(--border)}
 .img-slider-track{display:flex;height:100%;transition:transform 0.4s ease}
 .img-slider-track img{min-width:100%;height:100%;object-fit:cover;flex-shrink:0}
 .img-dots{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;gap:5px}
