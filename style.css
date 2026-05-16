@@ -170,7 +170,7 @@ section{padding:72px 0;border-bottom:1px solid var(--border)}
 .project-badge.ecom{background:#fdf4ff;color:#a21caf;border:1px solid #f0abfc}
 .project-badge.graphics{background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}
 .project-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
-.project-desc{font-size:12.5px;color:var(--text3);line-height:1.7;margin-bottom:12px}
+.project-desc{font-size:12.5px;color:var(--text3);line-height:1.7;margin-bottom:12px;min-height:90px}
 .project-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
 .project-links{display:flex;gap:8px;flex-wrap:wrap}
 .link-btn{font-size:12px;color:var(--accent);background:var(--accent-light);border:1px solid var(--accent-mid);padding:5px 12px;border-radius:7px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:all 0.2s;font-weight:500}
