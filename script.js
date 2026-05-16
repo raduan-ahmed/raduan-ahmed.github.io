@@ -64,7 +64,51 @@ function sendEmail(e) {
   window.location.href = mailtoLink;
 }
 
-// ── TYPING EFFECT ON HERO ─────────────────────────
+// ── PROJECT SLIDER ────────────────────────────────
+const track = document.getElementById('sliderTrack');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dotsContainer = document.getElementById('sliderDots');
+
+if (track) {
+  const cards = track.querySelectorAll('.slider-card');
+  const total = cards.length;
+  let current = 0;
+  let autoPlay;
+
+  // Build dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index) {
+    current = (index + total) % total;
+    const cardWidth = cards[0].offsetWidth + 16;
+    track.style.transform = `translateX(-${current * cardWidth}px)`;
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function startAuto() {
+    autoPlay = setInterval(() => goTo(current + 1), 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoPlay);
+  }
+
+  prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+  nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+  track.addEventListener('mouseenter', stopAuto);
+  track.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+  window.addEventListener('resize', () => goTo(current));
+}
 const titles = [
   'Computer Science Graduate',
   'NLP & AI Enthusiast',
